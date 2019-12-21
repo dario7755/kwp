@@ -1,0 +1,289 @@
+html, body {
+	height: 100%;
+	/* font-family: Helvetica, sans-serif; */
+	font-family: Helvetica;
+	min-height: 690px;
+}
+
+#kontejner {
+	min-width: 980px;
+}
+
+#col1, #col2 {
+	float: left;
+	width: 225px;
+	height: 100%;
+}
+
+#col3 {
+	margin-left: 450;
+	padding: 0px 20px;
+	color: rgb(100, 100, 100);
+}
+
+
+#col1 {
+	background-color: rgb(53,55,77);
+	color: rgb(185,195,205);
+}
+
+#col2 {
+	background-color: rgb(68,124,172);
+	color: white;
+}
+
+#naslov1 {
+	height: 60px;
+	line-height: 60px;
+	border-bottom: 2px solid rgb(40, 46, 56);
+	padding-left: 54px;
+	font-size: 24px;
+}
+
+#naslov1 h2 {
+	position: absolute;
+	left: 55px;
+	top: 5px;
+}
+
+#naslov1 img {
+	position: absolute;
+	left: 20px;
+	top: 22px;
+}
+
+#col1 ul li a {
+	float: left;
+	width: 100%;
+	height: 55px;
+	line-height: 55px;
+	list-style: none;
+	display: block;
+	color: rgb(185,190,195);
+	font-weight: 600;
+	text-decoration: none;	
+	border-bottom: 1px solid rgb(40,46,56);
+	border-color: rgb(100,100,100);
+	padding-left: 10px;	
+}
+
+#col1 ul li a:hover {
+	width: 100%;
+	background-color: rgb(70,80,94);
+	border-top: 1px solid rgb(40, 46, 56);
+	border-bottom: 1px solid rgb(40, 46, 56);
+	margin: -1px 0px 0px 0px;
+	padding-left: 20px;
+}
+
+#col1 ul li #inv {
+	width: 100%;
+	border-top: 1px solid rgb(40, 46, 56);
+	border-bottom: 1px solid rgb(40, 46, 56);
+	border-color: rgb(100,100,100);	
+	margin: -1px 0px 0px 0px;
+	padding-left: 10px;	
+}
+
+#col1 ul li img {
+	margin-left: 15px; 
+    padding-right: 20px; 
+}
+
+#naslov2 {
+	height: 60px;
+	line-height: 60px;
+	border-bottom: 1px solid rgb(58, 114, 165);
+	padding-left: 30px;
+	font-size: 22px;
+}
+
+#sort select{
+	position: relative;
+	width: 100%;
+	height:30px;
+	line-height: 23px;
+	font-size:11px;
+	padding-left: 105px;
+	color: rgb(124, 180, 204);
+	border:none;
+	border-top: 1px solid rgb( 111,122,133 );
+	border-bottom: 1px solid rgb( 100,111,133 );
+	background-color:transparent;
+	-webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+}
+
+#sort img {
+	position: absolute;
+	left: 415px;
+	padding:8px 0px 0px 10px;
+}
+
+#col2 a {
+	text-decoration: none;
+}
+
+#col2 li {
+	float: left;
+	width: 100%;
+	height: 66px;
+	list-style: none;
+	border-bottom: 1px solid rgb( 100, 110, 135 );
+}
+
+#col2 li .head_room{
+	padding: 15px 0px 10px 31px;
+	color:white;
+	font-size:16px;
+	font-weight: 600;
+}
+
+#col2 li p {
+	padding: 0px 0px 16px 31px;
+	font-size: 12px;
+	font-weight: 600;
+	color:rgb( 124,180,204 );
+}
+
+#col2 #sort:hover {
+	background-color: rgb( 85,150,200 );
+}
+	
+#col2 li:hover {
+	background-color: rgb( 69,160,205 );
+}
+
+#col3 a:hover {
+	background-color: rgb( 235,85,95 );
+}
+
+
+#naslov3 {
+	font-size:36px;
+	padding:65px 0px 40px 20px;
+
+}
+
+#snimi{
+	position:absolute; 
+	top: 60px; 
+	right: 20px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+	text-decoration:none;
+	color: white;
+	border:1px solid rgb(240,72,72);
+	background-color: rgb(230,75,75);
+	border-color: rgb(245,100,100);
+	border-radius: 5px;
+	line-height: 35px;
+	height: 35px;
+	width: 95px;
+}
+
+
+#t1, #t2 {
+	border-top: 1px solid rgb(222,222,222);
+	border-bottom: 1px solid rgb(222,222,222);
+	width: 100%;
+	padding-bottom: 50px; 
+	background-color: rgb(242,242,242);
+	margin-bottom: -1px;
+}
+
+#t1 th, #t2 th {
+	text-align: left;
+	padding:6px 0px 6px 30px;
+	width: 33.33%;
+	font-size: 12px;
+	color: rgb(222,222,222);
+}
+
+#t1 td, #t2 td {
+	padding:4px 0px 4px 30px;
+	width: 33%;
+	font-size: 12px;
+	color: rgb(102, 102, 102);
+	font-weight: 600;	
+}
+
+#last td{
+	padding-bottom: 15px;
+}
+
+#t3 {
+	width: 100%;
+	margin-top: 47px;
+	text-align: left;
+}
+
+#t3 tr {
+	border-bottom: 1px solid rgb(234, 234, 234);
+}
+
+#t3 th {
+	color:rgb(188,188,188);
+	font-size: 14px;
+	height: 38px;
+	line-height: 38px;	
+	padding-left: 11px;
+}
+
+#t3 td {
+	font-size: 14px;
+	color: rgb(102, 102, 102);
+	height: 60px;
+	padding:20px 0px 0px 20px;
+}
+
+#name {
+	width:33%;
+}
+
+#exp {
+	width:22%;
+}
+
+#st, #edit, #apply {
+	width: 15%;
+}
+
+
+label {
+	display: inline;
+
+}
+
+.regular-checkbox {
+	display: none;
+}
+
+.regular-checkbox + label {
+
+	background-color: white;
+	border: 1px solid rgb(188,188,188);
+	margin-left:4px;
+	padding: 6px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+
+}
+
+.regular-checkbox:checked + label {
+	background-color: rgb(59, 153, 252);
+	border: 1px solid rgb(59, 153, 252);	
+}
+
+.regular-checkbox:checked + label:after {
+	color: white;
+	content: "\2714";
+	font-size: 14px;
+	position: absolute;
+	top: 1px;
+	left: 1px;	
+}
