@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<title>Poruke</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	 	
+<link rel="stylesheet" href="style_poruke.css">
+
+<script src="./script_poruke.js"></script>
+
+
+<! JS jQuery   > 
+<script> 
+
+$(document).ready(function(){
+ function UrlVar() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+  } // UrlVar
+  
+  var oIme = UrlVar()["ime"];       
+  var oEmail = UrlVar()["email"];    
+  var oLozinka = UrlVar()["lozinka"];  
+  
+  var dIme = oIme.length;       
+  
+  $("#mjesto1").val(oIme);  
+  
+  $("#mjesto2").val(oEmail);  
+  
+   document.getElementById("mjesto3").innerHTML = oIme;  
+  
+  document.getElementById("mjesto4").innerHTML = oEmail; 
+  
+  if( dIme > 0 ) { document.getElementById("ime").innerHTML = oIme; }
+  else  { document.getElementById("ime").innerHTML = " ? "; }
+      
+  var i = $("#ime").val( );
+  
+  var d = i.length( );
+  
+  if ( typeof i === "undefined" ) {
+     $(#ime).val( " ? ");
+  }
+  else {
+	  $("#ime").append(" IME " );  
+	    // document.getElementById("ime").innerHTML = " IME ";	    
+	  }
+  	       
+  $("#txt1").keydown(function(){   
+	 $(this).css("background-color", "#F7F7F7" );
+	 izbroj();
+  });
+  
+  $("#txt1").click(function(){   
+	 $(this).css("background-color", "#F7F7F7" );
+	 izbroj();
+  });  
+     
+  var text = $( this ).text();
+  $( "input" ).val( text );
+  
+  $( "#poruka" ).keypress( function() {   
+      var o =  $("#txt1").val();
+      var p =   $("#txt1").("#txt1").val();
+	  var q =  o.val();
+	  
+	  var kol = $("#txt1").length;
+	  var d =  q.length; 
+	
+      var jos = 500 - d;    
+	      
+  });
+   
+  $("#f2").click(function(){
+    ucitajSliku2(event);
+  });
+  
+  $("#L2").click(function(){
+    ucitajSliku2(event);
+  });
+  
+  $("#em").click( function(){     
+	 var em = $("#email").val();
+	 $("#email").val(" ");
+  });
+  
+  $("#bt").click(   
+  function(){  
+		$("#mjesto1").val(" OVO JE MJESTO 1 ");  
+        $("#mjesto1").empty(); 
+		$("#mjesto1").append("ABCD");          		
+	  });	   
+	  
+  }); // (document).ready
+  
+</script>
+
+</head>
+
+<body>
+
+<form action="profil.html" id="dalje">
+
+<br>
+  <table id="lok3">
+	<tr id="r1" > 
+	  <td id="d1" >
+		<button type="submit" class="btn btn-success" id="bt2" > ← Back to profile </button> 
+	</td> </tr>
+  </table>		 
+
+<br> 
+<table id="poruke">  
+	<tr id="p1"> <td> ____________________________________________________________________________________ </td> </tr>	
+	<tr id="p2"> <td> ____________________________________________________________________________________ </td> </tr>	
+	<tr id="p3"> <td> ____________________________________________________________________________________ </td> </tr>	
+	<tr id="p4"> <td> ____________________________________________________________________________________ </td> </tr>	
+	<tr id="p5"> <td> ____________________________________________________________________________________ </td> </tr>	
+	<tr id="mjesto1"> <td> _______________________________________________________________________________________ </td> </tr>	
+	<tr id="mjesto2"> <td> _______________________________________________________________________________________ </td> </tr>	
+	<tr id="mjesto3"> <td> _______________________________________________________________________________________ </td> </tr>	
+	<tr id="mjesto4"> <td> _______________________________________________________________________________________ </td> </tr>	
+	<tr id="mjesto4"> <td> _______________________________________________________________________________________ </td> </tr>	
+</table> 
+ 
+</form>	
+	
+</body>
+
+</html>
+

@@ -1,0 +1,247 @@
+<!DOCTYPE html> 
+<html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+ 
+<title>Profil</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	 	
+<link rel="stylesheet" href="style_profil.css">
+
+<script src="script_profil.js"></script>
+
+<script>
+		var ucitajSliku1 = function( event ) {
+		var input = event.target;
+		var reader = new FileReader();
+		reader.onload = function(){
+		var dataURL = reader.result;
+		var output = document.getElementById('slk1');
+		output.src = dataURL;
+      };
+	  reader.readAsDataURL(input.files[0]);
+    }; 
+	
+		var ucitajSliku2 = function( event ) {
+		var input = event.target;
+		var reader = new FileReader();
+		reader.onload = function(){
+		var dataURL = reader.result;
+		var output = document.getElementById('slk2');
+		output.src = dataURL;
+    };
+    reader.readAsDataURL(input.files[0]);
+  };
+</script>
+
+<script> 
+$(document).ready(function(){
+ function UrlVar() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+  } // UrlVar
+  
+  var oIme = UrlVar()["ime"];       
+  var oEmail = UrlVar()["email"];    
+  var oLozinka = UrlVar()["lozinka"];  
+  
+  var dIme = oIme.length;       
+  
+  $("#ime").val(oIme);  
+  $("#email").val(oEmail);  
+  
+  if( dIme > 0 ) { document.getElementById("ime").innerHTML = oIme; }
+  else  { document.getElementById("ime").innerHTML = " ? "; }
+  
+  document.getElementById("ime").innerHTML = oIme;  
+  document.getElementById("email").innerHTML = oEmail;
+   
+  var i = $("#ime").val( );
+  
+  var d = i.length( );
+  
+  if ( typeof i === "undefined" ) {
+     $(#ime).val( " ? ");
+  }
+  else {
+	  $("#ime").append(" IME " );  
+	    // document.getElementById("ime").innerHTML = " IME ";	    
+	  }
+  	       
+  $("#txt1").keypress(function(){   	 
+	 izbroj();
+  });
+  
+  $("#txt1").click(function(){   
+	 $(this).css("background-color", "#F7F7F7" );
+	 izbroj();
+  });  
+     
+  var text = $( this ).text();
+  $( "input" ).val( text );
+   
+   
+  $("#f2").click(function(){
+    ucitajSliku2(event);
+  });
+  
+  $("#L2").click(function(){
+    ucitajSliku2(event);
+  });
+  
+  $("#em").click( function(){     
+	 var em = $("#email").val();
+	 $("#email").val(" ");
+  });
+  
+  $("#bt").click(   
+  function(){  
+		$("#mjesto1").val(" OVO JE MJESTO 1 ");  
+        $("#mjesto1").empty(); 
+		$("#mjesto1").append("ABCD");          		
+	  });	   
+	  
+  }); // (document).ready
+  
+ </script>
+
+</head>
+  
+<body>
+
+<form id="f1" >		 	 	
+		<img src="slika_naslov.jpg" alt="slika_naslov" id="slk1" />	
+</form>
+
+<div id="L1">
+    <label for="in1" id="labela1">		
+		<input type='file' accept='image/*' onchange = 'ucitajSliku1(event)' id="in1" value="O" name="s1" > O 
+	</label> 	
+</div>
+
+<form id="f2" >		 	
+		<img src="slika_osoba.jpg" alt="slika_naslov" id="slk2" />		
+</form>
+
+<div id="L2">
+    <label for="in2" id="labela2" onclick = 'ucitajSliku2(event)' >		
+		<input type='file' accept='image/*' onchange = 'ucitajSliku2(event)' id="in2" value="o" name="s2" > o 
+	</label> 	
+</div>
+	
+<br><br> 	
+<div id="kor" >    
+		<p type="text" id="ime" >  </p> 
+		<p type="text" id="email" > </p> 
+</div>  	
+  
+<br>  
+<div id="f3" >    	    
+	    <textarea rows="1" cols="1" name="poruka" id="txt1" value="Poruka"  onclick = "izbroj()"  >   </textarea>				
+</div>
+	 
+<br>
+	<div class="form-group" id="f4" >    
+	<table id="t3">
+			<tr id="rd">
+			    <td id="rdkol" > 
+				    <button type="submit" id="bt" onclick = "unesi()"  >Submit </button> 
+				</td>
+					<td id="mj2" >
+					   <p id="rdb" >  </p>
+				    </td>
+			</tr>		
+		</table>	
+	</div>		
+    
+<br>
+	<div id="poruke"  >
+		<table id="t2">
+			<tr id="rd">
+			     <td id="bt3" >   </td>
+		    </tr>
+		</table>
+	</div>	
+	
+<form action="poruke.html" id="dalje" method="GET">	
+	<button type="submit" class="btn btn-success" id="bt2" > Dalje </button> 
+</form>	
+
+
+<! JS HTML DOM >
+
+<script>
+
+document.getElementById("p3").innerHTML = " _____ NEW P3 ! _____ ";
+
+var element = document.getElementById("mjesto4");
+element.innerHTML = " ___ NEW MJESTO 4 !  ___ "; 
+
+var element = document.getElementById("mjesto1");
+	element.innerHTML = " ___ NEW  PLACE 1 !  ___ "; 
+
+var fnk1 = fn1();
+
+function fn1(){  			
+        document.getElementById("mjesto1").innerHTML = " --- NOVO MJESTO 1 ";					
+    }
+
+// ______________ fn unesi()
+
+var un = unesi();
+	
+function unesi() { 
+  var o =  document.getElementById("txt1");
+    
+  var p =  $("#txt1").val( );   
+  
+  var q =  o.value; 
+  
+  var d =  q.length; 
+  
+  var kol = p.length;
+    
+  var jos = 500 - d;    
+    
+  document.getElementById("rdb").innerHTML =  " jos == "+jos ;   
+   
+  if ( jos > 0 ) { 
+		document.getElementById("rdb").innerHTML = ( jos+" characters left. " ); 	  
+	}
+  else { $("#rdb").html = ( " Message to long - Unable to submit. " ); }
+      
+  if ( d>0 && d<500 ) { 
+    if ( mj > 0 ){
+    var tablica = document.getElementById("t2");
+	var red = tablica.insertRow(mj);
+	var cell1 = red.insertCell(0);
+    cell1.innerHTML = "  "+q;		
+    var lok = cell1.id; 
+	$( lok ).css('text-align','left'); 
+	$( lok ).css('border', '#dddddd solid 5px'); 
+			 	
+	poruke.push(p);
+	
+	poruka = podatci.poruke[mj];		
+	
+	}
+		
+  } 
+  
+  mj++;
+  
+  k++;   
+	
+} // unesi 
+	
+</script> 
+	
+</body>
+
+</html>
+
