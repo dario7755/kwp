@@ -1,0 +1,66 @@
+
+<!_____________________________________________________________________________________> 
+
+<!KWP-app-navbar-Component:>
+
+<app-navbar> </app-navbar>
+
+<!_____________________________________________________________________________________> 
+
+<!KWP-app-files-Component:>
+
+<app-files></app-files>
+
+<!_____________________________________________________________________________________> 
+  
+
+ <div role="banner" style="margin-left: 300px; margin-top:50px; width:80%"  id="fkt1" >  
+ 
+ <table class="table border-bottom tekst5 tb1" border = "0" style="width: 80%" >
+        <thead class="tb1r1">
+            <tr style="width: 80%">  
+                <th> </th>  
+                <th>Name</th>  
+                <th>Added</th>  
+                <th>Size</th>  
+				<th> </th>  
+				<th> </th>  
+            </tr>  
+        </thead>  
+        <tbody style="width: 80%">  
+			<tr *ngFor="let x of podatci;" style="width: 80%">  
+				<td class="text-center col-auto tekst10" > 					 
+					 <div [ngSwitch]="x.tip" >							
+							<img *ngSwitchCase='doc' src="./assets/images/doc.png" class="logot" />   
+							<img *ngSwitchCase="docx" src="./assets/images/docx.png" class="logot" /> 
+							<img *ngSwitchCase="mp3" src="./assets/images/mp3.png" class="logot" />   		
+							<img *ngSwitchCase="jpg" src="./assets/images/jpg.png" class="logot" />   		
+							<img *ngSwitchCase="pdf" src="./assets/images/pdf.png" class="logot" />   		
+							<img *ngSwitchCase="ppt" src="./assets/images/ppt.png" class="logot" />   		
+							<img *ngSwitchCase="pptx" src="./assets/images/pptx.png" class="logot" />   		
+							<img *ngSwitchCase="txt" src="./assets/images/txt.png" class="logot" />   		
+							<img *ngSwitchCase="xls" src="./assets/images/xls.png" class="logot" />   		
+							<img *ngSwitchCase="xlsx" src="./assets/images/xlsx.png" class="logot" />   		
+							<img *ngSwitchDefault src="./assets/images/file.png" class="logot" />
+					</div>				
+				</td>
+				<td> {{x.name}}.{{x.tip}} </td>
+				<td> {{x.added}} </td>
+				<td> {{x.size}} MB </td>
+				<td> <button type="button" class="btn btn-info" style="width:30px; height:30px;">
+						<span class="glyphicon glyphicon-download-alt" ></span> 
+					</button> 
+				</td>
+				<td> 
+					<button type="button" class="btn btn-info" style="width:30px; height:30px; border:red; background-color:red;">
+						<span class="glyphicon glyphicon-remove"></span> 
+					</button>
+				</td>
+			</tr>  
+        </tbody>  
+    </table>  
+</div>  	
+ 
+<!_____________________________________________________________________________________> 
+  
+<router-outlet></router-outlet>
