@@ -1,0 +1,171 @@
+/* You can add global styles to this file, and also import other style files */
+.tekst1 {
+	font-family: serif;
+	font-size: 32px;
+}
+
+.tekst2 , #tekst2 {
+	font-family: serif;
+	font-size: 30px;
+}
+
+.tekst3 , #tekst3 {
+	font-family: serif;
+	font-size: 25px;
+}
+
+.tekst32 , #tekst32 {
+	font-family: serif;
+	font-size: 25px;
+	color:#051040;
+}
+
+.tekst4 , #tekst4 {
+	font-family: serif;
+	font-size: 24px;	
+}
+
+.tekst5 , #tekst5 {
+	font-family: serif;
+	font-size: 20px;	
+}
+
+.ml200 , #ml200 {
+	margin-left: 200px;	
+}
+
+
+
+.fonta {
+	font-family: serif;
+}
+
+.ma {
+	margin-left: 250px;	
+	margin-top: 100px;	
+}
+
+
+.teksta {	
+	font-size: 24px;	
+}
+
+.tekstb {	
+	font-size: 20px;	
+}
+
+
+
+.dti1{
+	color: LightBlue;		
+	width: 25%;
+	font-size: 30px;		
+	font-style: oblique;
+	text-align: right;
+	border: none;
+}
+
+.dti2{
+	color: gray;		
+	width: 20%;	
+	text-align: right;
+	vertical-align: middle;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	border: none;
+}
+
+.dti3 {
+	color: gray;		
+	text-align: right;
+	vertical-align: middle;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: none;
+}
+
+
+.dt1{
+	font-family: serif;
+	font-size: 28px;		
+	color: LightGray;
+	text-align: left;
+	border: none;
+	width: 10%;
+}
+
+.dt2{
+	font-family: serif;
+	font-size: 20px;		
+	color: gray;
+	border: none;
+	width: 35%;	
+	text-align: left;
+}
+
+.dt3{
+	font-family: serif;
+	font-size: 20px;		
+	color: gray;
+	border: none;
+	width: 5%;
+	text-align: left;
+}
+
+.dt4{
+	font-family: serif;
+	font-size: 20px;		
+	color: gray;
+	border: none;
+	text-align: left;
+	width: 30%;
+}
+
+
+a:link {
+  text-decoration: none;
+  color: gray;
+  font-size: 22px;	
+}
+
+a:hover {
+  color: LightGray;
+  font-size: 22px;	
+} 
+
+#mj2 {
+  width: 70%;
+  margin: auto;  
+}
+
+
+.r1{
+	height: 30px;
+	border: none;
+	background-color: black;
+	color: gray;
+}
+
+.r2{
+	height: 20px;
+	border: none;
+	background-color: black;
+	color: gray;
+}
+
+#b1{
+	background-color: #171717;	
+}
+
+#b2{
+	background-color: black;	
+}
+
+.t1{
+	width: 100%;
+	background-color: black;
+	border: none;
+}
